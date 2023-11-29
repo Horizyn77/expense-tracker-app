@@ -63,4 +63,16 @@ describe("Testing the Expense Tracker App", function () {
 
         assert.deepEqual(result, testResult)
     })
+
+    it("should be able to get overall total", async () => {
+        //adding two expenses for category 5 once totalling 22000 altogether
+        await expenseTrackerService.addExpenseItem("Playstation", 13000, 13000, 5);
+        await expenseTrackerService.addExpenseItem("Cellphone", 9000, 9000, 5);
+        //adding another expense for category 4 weekend totalling 400
+        await expenseTrackerService.addExpenseItem("Takeout", 200, 400, 4)
+
+        const result = await expenseTrackerService.getOverallTotal();
+        // Testing whether the two totals come to 22400
+        assert.equal(result, 22400)
+    })
 })
