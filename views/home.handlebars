@@ -2,15 +2,15 @@
     <h1>Expense Tracker App</h1>
     <h2>Add expenses</h2>
 
-    <div>
+    <div id="description">
         <label for="">Description</label>
         <input type="text" id="description-input">
     </div>
-    <div>
+    <div id="amount">
         <label for="">Amount</label>
         <input type="text" id="amount-input">
     </div>
-    <div>
+    <div id="radio-btns">
         <div>
             <input type="radio" name="category" value="daily">
             <label for="">Daily</label>
@@ -29,7 +29,9 @@
         </div>
     </div>
     <button id="add-expense-btn">Add expense</button>
+    <div>
     <a href="/all">View All Expenses</a>
+    </div>
 </div>
 <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
 <script src="/js/home.js"></script>

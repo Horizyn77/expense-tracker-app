@@ -51,3 +51,7 @@ label {
 .overall-total h3 {
     width: 130px;
 }
+
+#description, #amount, #radio-btns, #add-expense-btn {
+    margin-bottom: 10px;
+}
