@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+.container {
+    width: 65%;
+    margin: 0 auto;
+    font-family: 'Poppins', sans-serif;
+}
+
+label {
+    width: 120px;
+    display: inline-block;
+}
+
+.expenses-table-heading,
+.expenses-table-content {
+    display: flex;
+    height: 30px;
+    align-items: center;
+}
+
+.expenses-table-heading * {
+    width: 130px;
+}
+
+.expenses-table-content * {
+    width: 130px;
+}
+
+.filter-container {
+    display: flex;
+    align-items: center;
+}
+
+.filter-container h2 {
+    margin-right: 30px;
+}
+
+.expenses-summary-heading div, .expenses-summary-content {
+    display: flex;
+}
+
+.expenses-summary-heading div *, .expenses-summary-content * {
+    width: 130px;
+}
+
+.overall-total {
+    display: flex;
+    align-items: center;
+}
+
+.overall-total h3 {
+    width: 130px;
+}

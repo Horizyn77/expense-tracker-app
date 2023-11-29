@@ -1,0 +1,35 @@
+<div class="container">
+    <h1>Expense Tracker App</h1>
+    <h2>Add expenses</h2>
+
+    <div>
+        <label for="">Description</label>
+        <input type="text" id="description-input">
+    </div>
+    <div>
+        <label for="">Amount</label>
+        <input type="text" id="amount-input">
+    </div>
+    <div>
+        <div>
+            <input type="radio" name="category" value="daily">
+            <label for="">Daily</label>
+            <input type="radio" name="category" value="weekly">
+            <label for="">Weekly</label>
+            <input type="radio" name="category" value="weekday">
+            <label for="">Weekday</label>
+        </div>
+        <div>
+            <input type="radio" name="category" value="once-off">
+            <label for="">Once off </label>
+            <input type="radio" name="category" value="monthly">
+            <label for="">Monthly</label>
+            <input type="radio" name="category" value="weekend">
+            <label for="">Weekend</label>
+        </div>
+    </div>
+    <button id="add-expense-btn">Add expense</button>
+    <a href="/all">View All Expenses</a>
+</div>
+<script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+<script src="/js/home.js"></script>

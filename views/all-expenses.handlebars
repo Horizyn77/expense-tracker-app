@@ -1,0 +1,48 @@
+<div class="container">
+    <h1>Expense Tracker App</h1>
+    <div class="expenses-table-heading">
+        <h3>Description</h3>
+        <h3>Category</h3>
+        <h3>Totals</h3>
+    </div>
+    {{#each data}}
+    <div class="expenses-table-content" data-expense-id="{{this.id}}">
+        <div>{{this.expense}}</div>
+        <div>{{this.category_type}}</div>
+        <div>R{{this.total}}</div>
+        <button class="delete-btn">Delete</button>
+    </div>
+    {{/each}}
+    <div class="expenses-summary-heading">
+        <h2>Expense summary per category</h2>
+        <div>
+            <h3>Category</h3>
+            <h3>Totals</h3>
+        </div>
+    </div>
+    {{#each allCategoryTotals}}
+    <div class="expenses-summary-content">
+        <div>{{this.category_type}}</div>
+        <div>R{{this.total_expense}}</div>
+    </div>
+    {{/each}}
+    <div class="overall-total">
+        <h3>Overall Total: </h3>
+        <div>R{{overallTotal}}</div>
+    </div>
+    <div class="filter-container">
+        <h2>Filter categories</h2>
+        <select name="filter-categories" id="">
+            <option value="default">Select Category</option>
+            <option value="weekly">Weekly</option>
+            <option value="monthly">Monthly</option>
+            <option value="weekday">Weekday</option>
+            <option value="weekend">Weekend</option>
+            <option value="once-off">Once-off</option>
+            <option value="daily">Daily</option>
+        </select>
+    </div>
+    <a href="/">Back to Home</a>
+</div>
+<script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+<script src="/js/allExpenses.js"></script>
