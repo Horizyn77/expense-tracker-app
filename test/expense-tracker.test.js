@@ -20,14 +20,14 @@ describe("Testing the Expense Tracker App", function () {
         await db.none("TRUNCATE TABLE expense RESTART IDENTITY")
     })
     //testing adding an expense
-    it("should be able to add an expense", async () => {
+    it("should be able to add and show an expense", async () => {
 
         await expenseTrackerService.addExpenseItem("Playstation", 13000, 13000, 5);
 
         const result = await expenseTrackerService.showAllExpenses();
 
         const expense = result[0].expense
-
+ 
         assert.equal(expense, "Playstation")
     })
 
